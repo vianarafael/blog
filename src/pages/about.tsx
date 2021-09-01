@@ -1,6 +1,16 @@
 import React from 'react';
 
-import Head from 'next/head';
+// The following import prevents a Font Awesome icon server-side rendering bug,
+// where the icons flash from a very large icon down to a properly sized one:
+import '@fortawesome/fontawesome-svg-core/styles.css';
+// Prevent fontawesome from adding its CSS since we did it manually above:
+// eslint-disable-next-line import/order
+import { config } from '@fortawesome/fontawesome-svg-core';
+
+config.autoAddCss = false; /* eslint-disable import/first */
+
+import { faGithub, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { Content } from '../content/Content';
 import { Meta } from '../layout/Meta';
@@ -8,16 +18,6 @@ import { Main } from '../templates/Main';
 
 const About = () => (
   <Main meta={<Meta title="Who" description="Who" />}>
-    <Head>
-      <link
-        href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css"
-        rel="stylesheet"
-      />
-      <link
-        href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css"
-        rel="stylesheet"
-      />
-    </Head>
     <Content>
       <p>
         I am a multidisciplinary software engineer and web developer.
@@ -29,15 +29,15 @@ const About = () => (
         Hit me up
         <div>
           <a href="https://twitter.com/vianarafaelds" target="_blank" rel="noreferrer">
-            <i className="icon-twitter" />
+            <FontAwesomeIcon icon={faTwitter} className="aaa" size="lg" />
           </a>
           {' '}
-          <a href="https://github.com/vianarafael" target="_blank" rel="noreferrer">
-            <i className="icon-github" />
+          <a href="https://twitter.com/vianarafaelds" target="_blank" rel="noreferrer">
+            <FontAwesomeIcon icon={faGithub} className="aaa" size="lg" />
           </a>
           {' '}
-          <a href="https://www.linkedin.com/in/rafael-viana/" target="_blank" rel="noreferrer">
-            <i className="icon-linkedin" />
+          <a href="https://twitter.com/vianarafaelds" target="_blank" rel="noreferrer">
+            <FontAwesomeIcon icon={faLinkedin} className="aaa" size="lg" />
           </a>
         </div>
       </p>
