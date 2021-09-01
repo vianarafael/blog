@@ -16,7 +16,15 @@ REST = Representational State Transfer
 Rafael is an example of a user resource.
 
 ## Representations is how those resources get manipulated
-An example is JSON. e.g. Resource: person Rafael Service: contact info (GET) Representation: name. Twitter, github { “name”: “Rafael Viana”, “Twitter”: “@vianarafaelds”, “Github”: “vianarafael” }
+An example is JSON. e.g. Resource: 
+person Rafael Service: contact info (GET) Representation: name. Twitter, github 
+```js 
+  {
+   "name": "Rafael Viana", 
+   "Twitter": "@vianarafaelds", 
+   "Github": "vianarafael" 
+   }
+```
 
 ## Constraints
 There are six constraints to a RESTful API:
@@ -41,4 +49,4 @@ The client doesn't know the inner working of the API - the client only knows the
 
 The server can transfer logic to the client - and the client executes the logic.
 
-That summary was based on <a alt="Roy Fielding's Dissertation" href="https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm">Roy Fielding's Dissertation</a>
+That summary was based on [Roy Fielding's Dissertation](https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm).
