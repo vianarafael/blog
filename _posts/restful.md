@@ -1,6 +1,6 @@
 ---
 title: 'RESTful APIs'
-description: An overview on RESTful APIs
+description: 'An overview on RESTful APIs'
 date: '2021-09-01'
 modified_date: '2021-09-01'
 image: /assets/images/posts/random-img.jpg
